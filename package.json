@@ -1,0 +1,47 @@
+{
+  "name": "nodejs-typescript-express-apollo-graphql-starter",
+  "version": "1.0.0",
+  "description": "NodeJS Apollo server with Typescript, express and GraphQL",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node 'dist/server.js'",
+    "build": "tsc -p . && ncp src/schema dist/schema",
+    "start:dev": "npm run build:dev",
+    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "graphql",
+    "apollo",
+    "express"
+  ],
+  "author": "Thomas Guibert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thmsgbrt/nodejs-typescript-express-apollo-graphql-starter/issues"
+  },
+  "homepage": "https://github.com/thmsgbrt/nodejs-typescript-express-apollo-graphql-starter#readme",
+  "devDependencies": {
+    "@types/compression": "0.0.36",
+    "@types/express": "4.16.1",
+    "@types/graphql": "14.0.7",
+    "@types/graphql-depth-limit": "1.1.0",
+    "@types/node": "11.9.4",
+    "graphql-depth-limit": "1.1.0",
+    "graphql-import": "0.7.1",
+    "graphql-import-node": "0.0.1",
+    "nodemon": "1.18.10",
+    "ts-node": "8.0.2",
+    "typescript": "3.3.3"
+  },
+  "dependencies": {
+    "apollo-server-express": "2.4.2",
+    "compression": "1.7.3",
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "graphql": "14.1.1",
+    "http": "0.0.0",
+    "ncp": "2.0.0"
+  }
+}
